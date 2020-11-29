@@ -10,4 +10,4 @@ Put your thumbnails in ./public/thumbnails (create folder if necessary)
 
 Create an object for each song in ./pubic/songs.json and make sure to respect the object model given in examples.
 
-Your song gallery should not be working, and you can now easily show your musical productions on your website.
+Your song gallery should now be working, and you can now easily show your musical productions on your website.
