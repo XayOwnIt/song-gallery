@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nom": "Dauntless",
+    "path": "./songs/Dauntless.mp3",
+    "thumbnail": "./thumbnails/dauntless.png"
+  },
+  {
+    "id": 2,
+    "nom": "Blackout in Tokyo",
+    "path": "./songs/Blackout in tokyo.mp3",
+    "thumbnail": "./thumbnails/blackoutintokyo.png"
+  },
+  {
+    "id": 3,
+    "nom": "Neptune",
+    "path": "./songs/Neptune.mp3",
+    "thumbnail": "./thumbnails/neptune.png"
+  },
+  {
+    "id": 4,
+    "nom": "Spacetime",
+    "path": "./songs/Spacetime.mp3",
+    "thumbnail": "./thumbnails/spacetime.png" 
+  },
+  {
+    "id": 5,
+    "nom": "Red Waves",
+    "path": "./songs/Red Waves.mp3",
+    "thumbnail": "./thumbnails/redwaves.png"
+  },
+  {
+    "id": 6,
+    "nom": "Underwater Level",
+    "path": "./songs/Underwater Level.mp3",
+    "thumbnail": "./thumbnails/underwaterlevel.png"
+  },
+  {
+    "id": 7,
+    "nom": "Invaders",
+    "path": "./songs/Invaders.mp3",
+    "thumbnail": "./thumbnails/invaders.png" 
+  }
+]
