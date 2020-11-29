@@ -42,6 +42,7 @@ div.songCard {
   align-items: center;
   font-size: 1.5rem;
   background-color: rgb(31, 31, 31);
+  cursor: pointer;
 }
 .songTitle {
   display: flex;
