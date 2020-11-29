@@ -58,7 +58,7 @@ div.songCard {
   height: 150px;
   background-color: rgba(0,0,0,0.4);
   position: absolute;
-  right: 0
+  right: 0;
 }
 
 .songTimer {

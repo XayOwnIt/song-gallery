@@ -10,7 +10,6 @@ const SongCard = (props) => {
 
   const audio = useMemo(() => new Audio(props.song.path), [])
 
-
   useEffect(() => {
     if(props.currentId === props.song.id) {
       playAudio()
@@ -88,12 +87,22 @@ const SongCard = (props) => {
     setTimer(minutes+':'+secondes)
   }
 
+  const changeCurrentTime = (e) => {
+    if(props.song.id === props.currentId) {
+      e.stopPropagation();
+      var bounds = e.nativeEvent.path[1].getBoundingClientRect();
+      var x = e.clientX - bounds.left;
+      audio.currentTime = x*Math.round(audio.duration)/200
+      setBgPixel((200 - Math.round((200 * Math.round(audio.currentTime)) / Math.round(audio.duration)))+"px")
+    }
+  }
+
   return (
     <div className="m-4 col-4 col-sm-4 col-md-3 col-lg-2 songCard">
-      <div className="coverContainer">
+      <div onClick={changeCurrentTime} className="coverContainer">
         {props.currentId === props.song.id ? (<div className="songTimer"><div>{timer}</div><div>/{audioDuration}</div></div>) : <div></div>}
         {props.currentId === props.song.id ? (<div style={{width: bgPixel}} className="playingSong"></div>) : <div></div>}
-        <img className="thumbnail" src={props.song.thumbnail}/>
+        <img alt={props.song.nom} className="thumbnail" src={props.song.thumbnail}/>
       </div>
       <div className="infoContainer">
         {play === true && props.currentId === props.song.id ? (<div className="playPauseButton" onClick={() => pauseAudio()}>II</div>)

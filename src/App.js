@@ -26,13 +26,13 @@ const App = () => {
 
   return (
     <div style={{backgroundColor: bgColor, transition: "2s"}}className="wrapper">
-      <div style={{color, transition: "2s"}} className="toggleLight" onClick={handleToggleLight}><span class="toggleLightIcon material-icons">
+      <div style={{color, transition: "2s"}} className="toggleLight" onClick={handleToggleLight}><span className="toggleLightIcon material-icons">
 emoji_objects
 </span></div>
       <div className="mainContainer row d-flex align-items-center justify-content-center">
           {
           songs.map(currentSong => {
-              return <SongCard currentId={currentId} setCurrentId={setCurrentId} song={currentSong}/>
+              return <SongCard key={currentSong.id} currentId={currentId} setCurrentId={setCurrentId} song={currentSong}/>
           })
           }
         </div>
