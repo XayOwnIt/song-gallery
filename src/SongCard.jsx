@@ -42,6 +42,7 @@ const SongCard = (props) => {
 
   const playAudio = async () => {
     setPlay(true);
+    updateTimer();
     const id = setInterval(Minuter, 1000)
     setIntervalId(id)
     try {
@@ -94,6 +95,7 @@ const SongCard = (props) => {
       var x = e.clientX - bounds.left;
       audio.currentTime = x*Math.round(audio.duration)/200
       setBgPixel((200 - Math.round((200 * Math.round(audio.currentTime)) / Math.round(audio.duration)))+"px")
+      updateTimer()
     }
   }
 
